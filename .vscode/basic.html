@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button> Touch me not!</button>
+
+    <script>
+    let btn = document.querySelector("button")
+
+        // inner text
+
+        // btn.innerText="Ramesh"
+
+        // addEventListner()
+        btn.addEventListener("click",hello)
+        let arr= ["red","green","tamato","balck","yellow","pink","peach"]
+        
+        
+        function hello(){
+            // console.log("I am clicked")
+            // alert("I am clicked")
+            let c1= parseInt(Math.random()*256)
+             let c2= parseInt(Math.random()*256)
+              let c3= parseInt(Math.random()*256)
+            //   document.body.style.color="red"
+            // document.body.style.backgroundColor=arr[parseInt(Math.random()*arr.length)]
+            document.body.style.backgroundColor=`rgb(${c1},${c2},${c3})`
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>0</button>
+
+
+    <script>
+        let btn = document.querySelector("button")
+
+
+        btn.addEventListener("click",add)
+        btn.addEventListener("blur", reset)
+
+
+        function reset(){
+            btn.innerText= +0
+        }
+        function add(){
+        let value=  btn.innerText
+        btn.innerText = +value + 1
+
+        }
+    </script>
+</body>
+</html> -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="a">btn1</button>
+    <button id="b">btn2</button>
+    <button id="c">btn3</button>
+    <button id="d">btn4</button>
+    <button id="e">btn5</button>
+    <button id="f">btn6</button>
+
+    <p>0</p>
+
+    <script>
+      let btn = document.querySelectorAll("button");
+      let para = document.querySelector("p");
+
+      for (let t of btn) {
+        t.addEventListener("click", counting);
+      }
+
+      let arr = new Set();
+      function counting(e) {
+        if (arr.has(e.target.id)) {
+          alert("you have clicked");
+        } else {
+          arr.add(e.target.id);
+          para.innerText = +para.innerText + 1;
+        }
+      }
+    </script>
+  </body>
+</html>
